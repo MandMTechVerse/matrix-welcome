@@ -1,0 +1,66 @@
+/* Fullscreen setup */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: black;
+  font-family: 'Orbitron', monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Matrix canvas */
+#matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Welcome content */
+#welcome-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  gap: 20px;
+  height: 100vh;
+}
+
+/* Logo */
+#logo {
+  width: 300px;
+  height: auto;
+}
+
+/* Heading */
+#welcome-content h1 {
+  margin: 0;
+  font-size: 48px;
+}
+
+/* Enter button */
+#enter-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 22px;
+  cursor: pointer;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+#enter-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
