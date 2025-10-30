@@ -12,40 +12,58 @@
     body { 
       font-family: 'Orbitron', sans-serif; 
       padding: 20px; 
-      background: #f4f4f4; /* light gray like before */ 
+      background: #000; /* black background */
+      color: #00FF00;   /* green text default */
     }
 
     .container { 
       max-width: 800px; 
       margin: auto; 
-      background: #f4f4f4; /* keep container light gray like download page background */
+      background: #111; /* dark container slightly lighter than background */
       padding: 20px; 
       border-radius: 10px; 
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* subtle shadow for depth */
+      box-shadow: 0 4px 10px rgba(0,255,0,0.2); /* subtle green glow */
     }
 
-    h1 { text-align: center; color: #007BFF; } /* blue headings */
-    img { max-width: 100%; border-radius: 10px; margin-bottom: 20px; }
-    p { font-size: 18px; line-height: 1.6; color: #333; } /* dark text for readability */
+    h1 { 
+      text-align: center; 
+      color: #00FF00; /* green headings */
+      font-size: 2em;
+    }
+
+    img { 
+      max-width: 100%; 
+      border-radius: 10px; 
+      margin-bottom: 20px; 
+      border: 2px solid #00FF00; /* optional green border around image */
+    }
+
+    p { 
+      font-size: 18px; 
+      line-height: 1.6; 
+      color: #00FF00; /* green text */
+    }
 
     .download-btn {
       display: inline-block;
       padding: 10px 20px;
-      background: #007BFF; /* blue like download page */
-      color: #fff;
+      background: #00FF00; /* green button */
+      color: #000;          /* black text inside button */
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
       margin-top: 10px;
       transition: background 0.3s;
     }
-    .download-btn:hover { background: #0056b3; }
+    .download-btn:hover { 
+      background: #00cc00; /* darker green on hover */
+    }
 
     .back-btn {
       display: inline-block;
       margin-top: 20px;
       text-decoration: none;
-      color: #007BFF;
+      color: #00FF00;
       font-weight: bold;
     }
     .back-btn:hover { text-decoration: underline; }
