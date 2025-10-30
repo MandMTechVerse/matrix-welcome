@@ -9,64 +9,103 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
 
   <style>
+    /* Base settings */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+    }
+
     body { 
-      font-family: 'Orbitron', sans-serif; 
-      padding: 20px; 
-      background: #000; /* black background */
-      color: #00FF00;   /* green text default */
+      background: #000;      
+      color: #fff;            
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
     }
 
     .container { 
       max-width: 800px; 
-      margin: auto; 
-      background: #111; /* dark container slightly lighter than background */
-      padding: 20px; 
-      border-radius: 10px; 
-      box-shadow: 0 4px 10px rgba(0,255,0,0.2); /* subtle green glow */
+      width: 100%;
+      background: #111;       
+      padding: 30px 20px; 
+      border-radius: 12px; 
+      box-shadow: 0 4px 15px rgba(0, 255, 153, 0.3); 
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    /* Hover effect: lift + glow */
+    .container:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 25px rgba(0, 255, 153, 0.5);
     }
 
     h1 { 
-      text-align: center; 
-      color: #00FF00; /* green headings */
+      color: #00ff99;        
       font-size: 2em;
+      margin-bottom: 20px;
     }
 
     img { 
       max-width: 100%; 
-      border-radius: 10px; 
+      border-radius: 12px; 
       margin-bottom: 20px; 
-      border: 2px solid #00FF00; /* optional green border around image */
+      border: 2px solid #00ff99;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 15px rgba(0, 255, 153, 0.4);
     }
 
     p { 
-      font-size: 18px; 
+      font-size: 1rem; 
       line-height: 1.6; 
-      color: #00FF00; /* green text */
+      color: #ccc;            
+      margin-bottom: 20px;
     }
 
+    /* Download button */
     .download-btn {
       display: inline-block;
-      padding: 10px 20px;
-      background: #00FF00; /* green button */
-      color: #000;          /* black text inside button */
+      padding: 12px 25px;
+      background: #00ff99;    
+      color: #000;            
       text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      margin-top: 10px;
-      transition: background 0.3s;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.2s;
     }
     .download-btn:hover { 
-      background: #00cc00; /* darker green on hover */
+      background: #00ffaa;    
+      transform: scale(1.05);
     }
 
+    /* Back button */
     .back-btn {
       display: inline-block;
       margin-top: 20px;
       text-decoration: none;
-      color: #00FF00;
+      color: #00ff99;
       font-weight: bold;
+      transition: color 0.3s;
     }
-    .back-btn:hover { text-decoration: underline; }
+    .back-btn:hover { 
+      color: #00ffaa; 
+      text-decoration: underline; 
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      h1 { font-size: 1.5rem; }
+      p { font-size: 0.9rem; }
+      .download-btn { padding: 10px 20px; }
+    }
   </style>
 </head>
 <body>
@@ -80,7 +119,7 @@
   </div>
 
   <script>
-    // Get item id and category from URL
+    // Get item id from URL
     const params = new URLSearchParams(window.location.search);
     const itemId = params.get('id');
 
