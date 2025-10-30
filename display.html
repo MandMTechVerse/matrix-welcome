@@ -3,111 +3,252 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Item Display - M&M TechVerse</title>
+  <title>M&M TechVerse</title>
   
   <!-- Orbitron font -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
 
   <style>
-    body { 
-      font-family: 'Orbitron', sans-serif; 
-      padding: 20px; 
-      background: #000; /* black background */
-      color: #00FF00;   /* green text default */
+    /* Base settings */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
     }
 
-    .container { 
-      max-width: 800px; 
-      margin: auto; 
-      background: #111; /* dark container slightly lighter than background */
-      padding: 20px; 
-      border-radius: 10px; 
-      box-shadow: 0 4px 10px rgba(0,255,0,0.2); /* subtle green glow */
+    body {
+      background: #000;
+      color: #fff;
+      min-height: 100vh;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    h1 { 
-      text-align: center; 
-      color: #00FF00; /* green headings */
-      font-size: 2em;
+    h1 {
+      color: #fff;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
-    img { 
-      max-width: 100%; 
-      border-radius: 10px; 
-      margin-bottom: 20px; 
-      border: 2px solid #00FF00; /* optional green border around image */
+    /* Grid container */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 columns */
+      gap: 20px;
+      width: 100%;
+      max-width: 1400px;
     }
 
-    p { 
-      font-size: 18px; 
-      line-height: 1.6; 
-      color: #00FF00; /* green text */
+    /* Card style */
+    .card {
+      background: #111;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 25px rgba(0, 255, 153, 0.5);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 2px solid #00ff99;
+      margin-bottom: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 15px rgba(0, 255, 153, 0.4);
+    }
+
+    .card h2 {
+      color: #fff;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #ccc;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      height: 40px;
+      overflow: hidden;
     }
 
     .download-btn {
       display: inline-block;
       padding: 10px 20px;
-      background: #00FF00; /* green button */
-      color: #000;          /* black text inside button */
+      background: #00ff99;
+      color: #000;
+      border-radius: 8px;
       text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      margin-top: 10px;
-      transition: background 0.3s;
-    }
-    .download-btn:hover { 
-      background: #00cc00; /* darker green on hover */
+      font-weight: 600;
+      transition: background 0.3s, transform 0.2s;
     }
 
-    .back-btn {
-      display: inline-block;
-      margin-top: 20px;
-      text-decoration: none;
-      color: #00FF00;
-      font-weight: bold;
+    .download-btn:hover {
+      background: #00ffaa;
+      transform: scale(1.05);
     }
-    .back-btn:hover { text-decoration: underline; }
+
+    /* Pagination buttons */
+    .pagination {
+      margin-top: 30px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .page-btn {
+      padding: 10px 18px;
+      background: #00ff99;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .page-btn:hover {
+      background: #00ffaa;
+      transform: scale(1.05);
+    }
+
+    .page-btn.active {
+      background: #00ffaa;
+      pointer-events: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 1200px) {
+      .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 992px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1 id="item-name">Loading...</h1>
-    <img id="item-image" src="" alt="Item Image">
-    <p id="item-description"></p>
-    <a id="download-btn" class="download-btn" href="#" target="_blank">Download</a>
-    <br>
-    <a href="#" class="back-btn" id="back-link">Back to Category</a>
+  <h1>M&M TechVerse</h1>
+  <div class="grid-container" id="grid-container"></div>
+
+  <div class="pagination" id="pagination">
+    <button id="prev-btn" class="page-btn">Previous</button>
+    <!-- Numbered page buttons will be inserted here -->
+    <button id="next-btn" class="page-btn">Next</button>
   </div>
 
   <script>
-    // Get item id and category from URL
-    const params = new URLSearchParams(window.location.search);
-    const itemId = params.get('id');
+    let currentPage = 1;
+    const itemsPerPage = 12;
+    let itemsData = [];
 
-    // Load data
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const pagination = document.getElementById('pagination');
+
+    // Fetch data.json
     fetch('data.json')
-      .then(response => response.json())
+      .then(res => res.json())
       .then(data => {
-        const item = data.find(d => d.id === itemId);
-        if(item) {
-          document.getElementById('item-name').innerText = item.name;
-          document.getElementById('item-description').innerText = item.description;
-          document.getElementById('item-image').src = item.image;
-          document.getElementById('download-btn').href = item.download;
-
-          // Back link based on category
-          let backLink = '#';
-          if(item.category === 'software') backLink = 'software.html';
-          else if(item.category === 'game') backLink = 'games.html';
-          else if(item.category === 'tutorial') backLink = 'tutorials.html';
-          document.getElementById('back-link').href = backLink;
-        } else {
-          document.getElementById('item-name').innerText = 'Item not found';
-          document.getElementById('item-description').innerText = '';
-          document.getElementById('download-btn').style.display = 'none';
-        }
+        itemsData = data;
+        createPageNumbers();
+        displayPage(currentPage);
       })
       .catch(err => console.error(err));
+
+    function displayPage(page) {
+      const container = document.getElementById('grid-container');
+      container.innerHTML = '';
+
+      const startIndex = (page - 1) * itemsPerPage;
+      const endIndex = startIndex + itemsPerPage;
+      const pageItems = itemsData.slice(startIndex, endIndex);
+
+      pageItems.forEach(item => {
+        const card = document.createElement('div');
+        card.classList.add('card');
+        card.innerHTML = `
+          <img src="${item.image}" alt="${item.name}">
+          <h2>${item.name}</h2>
+          <p>${item.description}</p>
+          <a href="${item.download}" target="_blank" class="download-btn">Download</a>
+        `;
+        container.appendChild(card);
+      });
+
+      updatePaginationButtons();
+    }
+
+    function createPageNumbers() {
+      const totalPages = Math.ceil(itemsData.length / itemsPerPage);
+
+      // Remove old numbered buttons if any
+      const oldNumbers = document.querySelectorAll('.page-number');
+      oldNumbers.forEach(btn => btn.remove());
+
+      for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement('button');
+        btn.innerText = i;
+        btn.classList.add('page-btn', 'page-number');
+        btn.addEventListener('click', () => {
+          currentPage = i;
+          displayPage(currentPage);
+        });
+        pagination.insertBefore(btn, nextBtn);
+      }
+    }
+
+    function updatePaginationButtons() {
+      // Update Previous/Next visibility
+      prevBtn.style.display = currentPage === 1 ? 'none' : 'inline-block';
+      nextBtn.style.display = currentPage * itemsPerPage >= itemsData.length ? 'none' : 'inline-block';
+
+      // Highlight active page number
+      const pageNumbers = document.querySelectorAll('.page-number');
+      pageNumbers.forEach((btn, index) => {
+        btn.classList.remove('active');
+        if(index === currentPage - 1) btn.classList.add('active');
+      });
+    }
+
+    prevBtn.addEventListener('click', () => {
+      if(currentPage > 1) {
+        currentPage--;
+        displayPage(currentPage);
+      }
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if(currentPage * itemsPerPage < itemsData.length) {
+        currentPage++;
+        displayPage(currentPage);
+      }
+    });
   </script>
 </body>
 </html>
