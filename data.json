@@ -1,6 +1,5 @@
 [
-  /* SOFTWARE ITEMS */
-  {
+    {
     "id": "s1",
     "name": "Software Alpha",
     "description": "A powerful tool for productivity and organization.",
@@ -96,8 +95,6 @@
     "download": "downloads/software12.exe",
     "category": "software"
   },
-
-  /* GAME ITEMS */
   {
     "id": "g1",
     "name": "Game Alpha",
@@ -194,8 +191,6 @@
     "download": "downloads/game12.exe",
     "category": "game"
   },
-
-  /* TUTORIAL ITEMS */
   {
     "id": "t1",
     "name": "Tutorial Alpha",
