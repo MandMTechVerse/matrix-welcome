@@ -1,0 +1,26 @@
+[
+  {
+    "id": "software1",
+    "category": "software",
+    "name": "Super Cleaner",
+    "description": "Lightweight utility to optimize Windows performance.",
+    "download": "downloads/super-cleaner.exe",
+    "image": "images/super-cleaner.png"
+  },
+  {
+    "id": "game1",
+    "category": "game",
+    "name": "Speed Racer",
+    "description": "Fast-paced racing game with stunning graphics.",
+    "download": "downloads/speed-racer.exe",
+    "image": "images/speed-racer.png"
+  },
+  {
+    "id": "tutorial1",
+    "category": "tutorial",
+    "name": "Windows Tips Guide",
+    "description": "Step-by-step guide to mastering Windows tips.",
+    "download": "downloads/windows-tips.pdf",
+    "image": "images/windows-tips.png"
+  }
+]
