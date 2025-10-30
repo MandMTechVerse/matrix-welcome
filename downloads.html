@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M&M TechVerse | Downloads</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      margin: 0;
+    }
+    header {
+      background: #0a0a0a;
+      padding: 20px;
+      font-size: 1.5em;
+      border-bottom: 2px solid #00ff99;
+    }
+    .app-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 40px auto;
+      gap: 20px;
+      max-width: 1000px;
+    }
+    .app {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 10px;
+      padding: 20px;
+      width: 280px;
+      transition: 0.3s;
+    }
+    .app:hover {
+      transform: scale(1.05);
+      border-color: #00ff99;
+    }
+    .app img {
+      width: 100px;
+      height: 100px;
+    }
+    .btn {
+      background: #00ff99;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background: #00cc7a;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🧩 M&M TechVerse Downloads</h1>
+    <a href="index.html" style="color:#00ff99;">← Back to Home</a>
+  </header>
+
+  <main>
+    <section class="app-grid">
+
+      <div class="app">
+        <img src="assets/logo.gif" alt="App 1 Logo">
+        <h3>Tech Tool 1</h3>
+        <p>Lightweight utility to optimize Windows performance.</p>
+        <a href="https://t.me/yourdownloadlink" class="btn">Download</a>
+      </div>
+
+      <div class="app">
+        <img src="assets/logo.gif" alt="App 2 Logo">
+        <h3>Driver Updater</h3>
+        <p>Automatically update all your PC drivers safely.</p>
+        <a href="https://github.com/MandMTechVerse/matrix-welcome/releases/download/v1.0/app2.zip" class="btn">Download</a>
+      </div>
+
+      <div class="app">
+        <img src="assets/logo.gif" alt="App 3 Logo">
+        <h3>Privacy Guard</h3>
+        <p>Clean trackers and boost privacy with one click.</p>
+        <a href="software/app3/setup.exe" class="btn">Download</a>
+      </div>
+
+    </section>
+  </main>
+
+  <footer style="margin-top:50px; background:#0a0a0a; padding:20px;">
+    <p>© 2025 M&M TechVerse | All rights reserved</p>
+  </footer>
+</body>
+</html>
