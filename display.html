@@ -4,48 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Item Display - M&M TechVerse</title>
-  
-  <!-- Orbitron font -->
+
+  <!-- Orbitron font only -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
 
-  <style>
-    body { font-family: 'Orbitron', sans-serif; padding: 20px; background: #f4f4f4; }
-    .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 10px; }
-    h1 { text-align: center; }
-    img { max-width: 100%; border-radius: 10px; margin-bottom: 20px; }
-    p { font-size: 18px; line-height: 1.6; }
-    .download-btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background: #007BFF;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      margin-top: 10px;
-    }
-    .download-btn:hover { background: #0056b3; }
-    .back-btn {
-      display: inline-block;
-      margin-top: 20px;
-      text-decoration: none;
-      color: #007BFF;
-      font-weight: bold;
-    }
-  </style>
+  <!-- Use the same CSS as download page -->
+  <link rel="stylesheet" href="downloads.css">
 </head>
 <body>
-  <div class="container">
-    <h1 id="item-name">Loading...</h1>
-    <img id="item-image" src="" alt="Item Image">
-    <p id="item-description"></p>
-    <a id="download-btn" class="download-btn" href="#" target="_blank">Download</a>
-    <br>
-    <a href="#" class="back-btn" id="back-link">Back to Category</a>
-  </div>
+  <header>
+    <h1>M&M TechVerse</h1>
+    <a href="download.html" class="back-button">Back to Downloads</a>
+  </header>
+
+  <main class="downloads-container">
+    <div class="card">
+      <img id="item-image" src="assets/logo.gif" alt="Item Image">
+      <h2 id="item-name">Loading...</h2>
+      <p id="item-description"></p>
+      <a id="download-btn" class="download-btn" href="#" target="_blank">Download</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 M&M TechVerse | All rights reserved</p>
+  </footer>
 
   <script>
-    // Get item id and category from URL
+    // Get item id from URL
     const params = new URLSearchParams(window.location.search);
     const itemId = params.get('id');
 
@@ -59,15 +45,10 @@
           document.getElementById('item-description').innerText = item.description;
           document.getElementById('item-image').src = item.image;
           document.getElementById('download-btn').href = item.download;
-
-          // Back link based on category
-          let backLink = '#';
-          if(item.category === 'software') backLink = 'software.html';
-          else if(item.category === 'game') backLink = 'games.html';
-          else if(item.category === 'tutorial') backLink = 'tutorials.html';
-          document.getElementById('back-link').href = backLink;
         } else {
           document.getElementById('item-name').innerText = 'Item not found';
+          document.getElementById('item-description').innerText = '';
+          document.getElementById('download-btn').style.display = 'none';
         }
       })
       .catch(err => console.error(err));
