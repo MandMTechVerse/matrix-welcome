@@ -285,11 +285,11 @@
     "category": "tutorial"
   },
   {
-    "id": "g12",
-    "name": "Game Mu",
-    "description": "Classic retro game with modern graphics.",
-    "image": "images/game12.png",
-    "download": "downloads/game12.exe",
-    "category": "game"
+    "id": "t12",
+    "name": "Tutorial Mu",
+    "description": "Learn JavaScript",
+    "image": "images/tutorial12.png",
+    "download": "downloads/tutorial12.pdf",
+    "category": "tutorial"
   }
 ]
