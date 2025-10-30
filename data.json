@@ -1,26 +1,295 @@
 [
+  /* SOFTWARE ITEMS */
   {
-    "id": "software1",
-    "category": "software",
-    "name": "Super Cleaner",
-    "description": "Lightweight utility to optimize Windows performance.",
-    "download": "downloads/super-cleaner.exe",
-    "image": "images/super-cleaner.png"
+    "id": "s1",
+    "name": "Software Alpha",
+    "description": "A powerful tool for productivity and organization.",
+    "image": "images/software1.png",
+    "download": "downloads/software1.exe",
+    "category": "software"
   },
   {
-    "id": "game1",
-    "category": "game",
-    "name": "Speed Racer",
+    "id": "s2",
+    "name": "Software Beta",
+    "description": "Enhance your graphics design workflow.",
+    "image": "images/software2.png",
+    "download": "downloads/software2.exe",
+    "category": "software"
+  },
+  {
+    "id": "s3",
+    "name": "Software Gamma",
+    "description": "Optimize your system performance easily.",
+    "image": "images/software3.png",
+    "download": "downloads/software3.exe",
+    "category": "software"
+  },
+  {
+    "id": "s4",
+    "name": "Software Delta",
+    "description": "Secure your files with advanced encryption.",
+    "image": "images/software4.png",
+    "download": "downloads/software4.exe",
+    "category": "software"
+  },
+  {
+    "id": "s5",
+    "name": "Software Epsilon",
+    "description": "Manage tasks efficiently with this app.",
+    "image": "images/software5.png",
+    "download": "downloads/software5.exe",
+    "category": "software"
+  },
+  {
+    "id": "s6",
+    "name": "Software Zeta",
+    "description": "Automate repetitive tasks effortlessly.",
+    "image": "images/software6.png",
+    "download": "downloads/software6.exe",
+    "category": "software"
+  },
+  {
+    "id": "s7",
+    "name": "Software Eta",
+    "description": "Backup your important files securely.",
+    "image": "images/software7.png",
+    "download": "downloads/software7.exe",
+    "category": "software"
+  },
+  {
+    "id": "s8",
+    "name": "Software Theta",
+    "description": "Monitor system resources in real-time.",
+    "image": "images/software8.png",
+    "download": "downloads/software8.exe",
+    "category": "software"
+  },
+  {
+    "id": "s9",
+    "name": "Software Iota",
+    "description": "Create diagrams and charts easily.",
+    "image": "images/software9.png",
+    "download": "downloads/software9.exe",
+    "category": "software"
+  },
+  {
+    "id": "s10",
+    "name": "Software Kappa",
+    "description": "Edit documents and spreadsheets efficiently.",
+    "image": "images/software10.png",
+    "download": "downloads/software10.exe",
+    "category": "software"
+  },
+  {
+    "id": "s11",
+    "name": "Software Lambda",
+    "description": "Design user interfaces quickly and easily.",
+    "image": "images/software11.png",
+    "download": "downloads/software11.exe",
+    "category": "software"
+  },
+  {
+    "id": "s12",
+    "name": "Software Mu",
+    "description": "Enhance video quality with professional tools.",
+    "image": "images/software12.png",
+    "download": "downloads/software12.exe",
+    "category": "software"
+  },
+
+  /* GAME ITEMS */
+  {
+    "id": "g1",
+    "name": "Game Alpha",
+    "description": "An exciting action-adventure game for all ages.",
+    "image": "images/game1.png",
+    "download": "downloads/game1.exe",
+    "category": "game"
+  },
+  {
+    "id": "g2",
+    "name": "Game Beta",
+    "description": "Challenge yourself in this strategy game.",
+    "image": "images/game2.png",
+    "download": "downloads/game2.exe",
+    "category": "game"
+  },
+  {
+    "id": "g3",
+    "name": "Game Gamma",
     "description": "Fast-paced racing game with stunning graphics.",
-    "download": "downloads/speed-racer.exe",
-    "image": "images/speed-racer.png"
+    "image": "images/game3.png",
+    "download": "downloads/game3.exe",
+    "category": "game"
   },
   {
-    "id": "tutorial1",
-    "category": "tutorial",
-    "name": "Windows Tips Guide",
-    "description": "Step-by-step guide to mastering Windows tips.",
-    "download": "downloads/windows-tips.pdf",
-    "image": "images/windows-tips.png"
+    "id": "g4",
+    "name": "Game Delta",
+    "description": "Explore vast worlds in this RPG adventure.",
+    "image": "images/game4.png",
+    "download": "downloads/game4.exe",
+    "category": "game"
+  },
+  {
+    "id": "g5",
+    "name": "Game Epsilon",
+    "description": "Classic puzzle game to exercise your brain.",
+    "image": "images/game5.png",
+    "download": "downloads/game5.exe",
+    "category": "game"
+  },
+  {
+    "id": "g6",
+    "name": "Game Zeta",
+    "description": "Multiplayer shooter with realistic physics.",
+    "image": "images/game6.png",
+    "download": "downloads/game6.exe",
+    "category": "game"
+  },
+  {
+    "id": "g7",
+    "name": "Game Eta",
+    "description": "Immersive horror survival experience.",
+    "image": "images/game7.png",
+    "download": "downloads/game7.exe",
+    "category": "game"
+  },
+  {
+    "id": "g8",
+    "name": "Game Theta",
+    "description": "Arcade-style action for endless fun.",
+    "image": "images/game8.png",
+    "download": "downloads/game8.exe",
+    "category": "game"
+  },
+  {
+    "id": "g9",
+    "name": "Game Iota",
+    "description": "Sports simulation with realistic gameplay.",
+    "image": "images/game9.png",
+    "download": "downloads/game9.exe",
+    "category": "game"
+  },
+  {
+    "id": "g10",
+    "name": "Game Kappa",
+    "description": "Adventure platformer with exciting levels.",
+    "image": "images/game10.png",
+    "download": "downloads/game10.exe",
+    "category": "game"
+  },
+  {
+    "id": "g11",
+    "name": "Game Lambda",
+    "description": "Build and manage your own virtual world.",
+    "image": "images/game11.png",
+    "download": "downloads/game11.exe",
+    "category": "game"
+  },
+  {
+    "id": "g12",
+    "name": "Game Mu",
+    "description": "Classic retro game with modern graphics.",
+    "image": "images/game12.png",
+    "download": "downloads/game12.exe",
+    "category": "game"
+  },
+
+  /* TUTORIAL ITEMS */
+  {
+    "id": "t1",
+    "name": "Tutorial Alpha",
+    "description": "Learn coding basics step by step.",
+    "image": "images/tutorial1.png",
+    "download": "downloads/tutorial1.pdf",
+    "category": "tutorial"
+  },
+  {
+    "id": "t2",
+    "name": "Tutorial Beta",
+    "description": "Master video editing in minutes.",
+    "image": "images/tutorial2.png",
+    "download": "downloads/tutorial2.pdf",
+    "category": "tutorial"
+  },
+  {
+    "id": "t3",
+    "name": "Tutorial Gamma",
+    "description": "Step-by-step guide to learn Python programming.",
+    "image": "images/tutorial3.png",
+    "download": "downloads/tutorial3.pdf",
+    "category": "tutorial"
+  },
+  {
+    "id": "t4",
+    "name": "Tutorial Delta",
+    "description": "Learn Photoshop tips and tricks quickly.",
+    "image": "images/tutorial4.png",
+    "download": "downloads/tutorial4.pdf",
+    "category": "tutorial"
+  },
+  {
+    "id": "t5",
+    "name": "Tutorial Epsilon",
+    "description": "Build a website from scratch with HTML & CSS.",
+    "image": "images/tutorial5.png",
+    "download": "downloads/tutorial5.pdf",
+    "category": "tutorial"
+  },
+  {
+    "id": "t6",
+    "name": "Tutorial Zeta",
+    "description": "Learn 3D modeling in Blender easily.",
+    "image": "images/tutorial6.png",
+    "download": "downloads/tutorial6.pdf",
+    "category": "tutorial"
+  },
+  {
+    "id": "t7",
+    "name": "Tutorial Eta",
+    "description": "Create animations using Adobe After Effects.",
+    "image": "images/tutorial7.png",
+    "download": "downloads/tutorial7.pdf",
+    "category": "tutorial"
+  },
+  {
+    "id": "t8",
+    "name": "Tutorial Theta",
+    "description": "Learn Microsoft Excel formulas and functions.",
+    "image": "images/tutorial8.png",
+    "download": "downloads/tutorial8.pdf",
+    "category": "tutorial"
+  },
+  {
+    "id": "t9",
+    "name": "Tutorial Iota",
+    "description": "Design logos with Illustrator like a pro.",
+    "image": "images/tutorial9.png",
+    "download": "downloads/tutorial9.pdf",
+    "category": "tutorial"
+  },
+  {
+    "id": "t10",
+    "name": "Tutorial Kappa",
+    "description": "Introduction to JavaScript for beginners.",
+    "image": "images/tutorial10.png",
+    "download": "downloads/tutorial10.pdf",
+    "category": "tutorial"
+  },
+  {
+    "id": "t11",
+    "name": "Tutorial Lambda",
+    "description": "Learn Python data analysis with Pandas.",
+    "image": "images/tutorial11.png",
+    "download": "downloads/tutorial11.pdf",
+    "category": "tutorial"
+  },
+  {
+    "id": "g12",
+    "name": "Game Mu",
+    "description": "Classic retro game with modern graphics.",
+    "image": "images/game12.png",
+    "download": "downloads/game12.exe",
+    "category": "game"
   }
 ]
