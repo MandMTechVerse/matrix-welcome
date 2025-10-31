@@ -30,11 +30,11 @@ h1 {
   color: rgba(255,255,255,0.5);
 }
 
-/* Grid layout: 3 rows, 5 columns (auto responsive) */
+/* Grid layout: 5 columns, uniform height */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(5, 1fr); /* fixed 5 columns */
+  gap: 20px;                             /* space between cards */
   padding: 2rem;
   max-width: 1200px;
   margin: auto;
@@ -54,10 +54,11 @@ h1 {
   box-shadow: 0 0 15px rgba(0,255,0,0.4);
 }
 
+/* Portrait images for cards */
 .card img {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
+  height: 330px;       /* fixed portrait height */
+  object-fit: cover;    /* crop if necessary */
   border-radius: 10px;
   margin-bottom: 1rem;
 }
@@ -140,8 +141,34 @@ footer {
 }
 
 /* Responsive */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for smaller screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for phones */
+  }
+}
+
 @media (max-width: 480px) {
   h1 {
     font-size: 1.5rem;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr; /* 1 column for very small phones */
+  }
+  
+  .card img {
+    height: auto; /* scale images on small screens */
   }
 }
