@@ -48,22 +48,35 @@
       text-align: center;
     }
 
-    /* New button styled like pagination buttons */
-    #homebtn {
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Apply Orbitron font to all buttons */
+    button {
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    /* Buttons: Home & Pagination styles */
+    .btn {
       background: rgba(255,255,255,0.1);
       border: 1px solid rgba(255,255,255,0.3);
       color: white;
       padding: 10px 20px;
       border-radius: 8px;
       cursor: pointer;
-      margin: 15px 0;
-      font-family: 'Orbitron', sans-serif;
       font-size: 16px;
       transition: all 0.3s ease;
     }
 
-    #homebtn:hover {
+    .btn:hover {
       background: rgba(255,255,255,0.2);
+    }
+
+    /* Home button specific spacing */
+    #homebtn {
+      margin: 15px 0; /* space between title and search box */
     }
 
     /* Search box style */
@@ -83,20 +96,102 @@
     #searchBox::placeholder {
       color: rgba(255,255,255,0.5);
     }
+
+    /* Grid layout */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      text-align: center;
+      padding: 1rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 15px rgba(0,255,0,0.4);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      color: #00ff00;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    /* Pagination */
+    .pagination {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .pagination button {
+      margin: 0 10px;
+    }
+
+    /* Social Icons */
+    .social-icons {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .social-icons img {
+      width: 40px;
+      height: 40px;
+      margin: 0 10px;
+      transition: transform 0.3s;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- Matrix Background -->
   <canvas id="matrix"></canvas>
 
-  <!-- Page content wrapper -->
   <div class="page-content">
     <header>
       <h1>M&M TechVerse</h1>
-      
-      <!-- Button linking to download.html -->
-      <button id="homebtn" class="pagination-btn">Home</button>
-      
+
+      <!-- Home button -->
+      <button id="homebtn" class="btn">Click Me</button>
+
       <input type="text" id="searchBox" placeholder="Search..." />
     </header>
 
@@ -105,13 +200,12 @@
 
       <!-- Pagination -->
       <div class="pagination">
-        <button id="prevBtn">Previous</button>
+        <button id="prevBtn" class="btn">Previous</button>
         <span id="pageInfo"></span>
-        <button id="nextBtn">Next</button>
+        <button id="nextBtn" class="btn">Next</button>
       </div>
     </main>
 
-    <!-- Social Media -->
     <div class="social-icons">
       <a href="https://facebook.com" target="_blank"><img src="assets/facebook.png" alt="Facebook"></a>
       <a href="https://t.me" target="_blank"><img src="assets/telegram.png" alt="Telegram"></a>
@@ -127,7 +221,7 @@
   <script src="display.js"></script>
   <script src="matrix.js"></script>
 
-  <!-- Script to redirect button click -->
+  <!-- Redirect home button -->
   <script>
     const homeBtn = document.getElementById('homebtn');
     homeBtn.addEventListener('click', () => {
