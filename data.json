@@ -1,37 +1,202 @@
 [
-  { "title": "Software 1", "image": "assets/software1.png", "description": "Shared via Telegram. Click to download.", "download": "https://t.me/yourchannel/1001" },
-  { "title": "Software 2", "image": "assets/software2.png", "description": "Professional software. Local download.", "download": "download/software2.exe" },
-  { "title": "Software 3", "image": "assets/software3.png", "description": "Advanced tool for productivity.", "download": "https://t.me/yourchannel/1003" },
-  { "title": "Software 4", "image": "assets/software4.png", "description": "Graphics design software.", "download": "download/software4.exe" },
-  { "title": "Software 5", "image": "assets/software5.png", "description": "Security software for PC.", "download": "https://t.me/yourchannel/1005" },
-  { "title": "Software 6", "image": "assets/software6.png", "description": "Software for developers.", "download": "download/software6.exe" },
-  { "title": "Software 7", "image": "assets/software7.png", "description": "Video editing software.", "download": "https://t.me/yourchannel/1007" },
-  { "title": "Software 8", "image": "assets/software8.png", "description": "Music production software.", "download": "download/software8.exe" },
-  { "title": "Software 9", "image": "assets/software9.png", "description": "Cloud storage software.", "download": "https://t.me/yourchannel/1009" },
-  { "title": "Software 10", "image": "assets/software10.png", "description": "3D modeling software.", "download": "download/software10.exe" },
-  { "title": "Software 11", "image": "assets/software11.png", "description": "Productivity suite.", "download": "https://t.me/yourchannel/1011" },
+  {
+    "title": "Software 1",
+    "image": "assets/software1.png",
+    "description": "Productivity software shared via Telegram.",
+    "download": "https://t.me/yourchannel/1111"
+  },
+  {
+    "title": "Software 2",
+    "image": "assets/software2.png",
+    "description": "Professional software tool.",
+    "download": "https://t.me/yourchannel/1112"
+  },
+  {
+    "title": "Software 3",
+    "image": "assets/software3.png",
+    "description": "Advanced software for power users.",
+    "download": "https://t.me/yourchannel/1113"
+  },
+  {
+    "title": "Software 4",
+    "image": "assets/software4.png",
+    "description": "Software for graphic design.",
+    "download": "https://t.me/yourchannel/1114"
+  },
+  {
+    "title": "Software 5",
+    "image": "assets/software5.png",
+    "description": "Utility software to boost productivity.",
+    "download": "https://t.me/yourchannel/1115"
+  },
+  {
+    "title": "Software 6",
+    "image": "assets/software6.png",
+    "description": "Security software for your PC.",
+    "download": "https://t.me/yourchannel/1116"
+  },
+  {
+    "title": "Software 7",
+    "image": "assets/software7.png",
+    "description": "Software for developers.",
+    "download": "https://t.me/yourchannel/1117"
+  },
+  {
+    "title": "Software 8",
+    "image": "assets/software8.png",
+    "description": "Software for video editing.",
+    "download": "https://t.me/yourchannel/1118"
+  },
+  {
+    "title": "Software 9",
+    "image": "assets/software9.png",
+    "description": "Software for music production.",
+    "download": "https://t.me/yourchannel/1119"
+  },
+  {
+    "title": "Software 10",
+    "image": "assets/software10.png",
+    "description": "Software for 3D modeling.",
+    "download": "https://t.me/yourchannel/1120"
+  },
+  {
+    "title": "Software 11",
+    "image": "assets/software11.png",
+    "description": "Software for cloud storage.",
+    "download": "https://t.me/yourchannel/1121"
+  },
 
-  { "title": "Game 1", "image": "assets/game1.png", "description": "Fun game. Direct download link.", "download": "download/game1.exe" },
-  { "title": "Game 2", "image": "assets/game2.png", "description": "Strategy game shared via Telegram.", "download": "https://t.me/yourchannel/2002" },
-  { "title": "Game 3", "image": "assets/game3.png", "description": "Puzzle game tutorial on YouTube.", "download": "https://www.youtube.com/watch?v=game3" },
-  { "title": "Game 4", "image": "assets/game4.png", "description": "Adventure game on Facebook.", "download": "https://www.facebook.com/yourpage/posts/game4" },
-  { "title": "Game 5", "image": "assets/game5.png", "description": "Multiplayer racing game.", "download": "download/game5.exe" },
-  { "title": "Game 6", "image": "assets/game6.png", "description": "Shooter game shared via Telegram.", "download": "https://t.me/yourchannel/2006" },
-  { "title": "Game 7", "image": "assets/game7.png", "description": "Arcade game tutorial on YouTube.", "download": "https://www.youtube.com/watch?v=game7" },
-  { "title": "Game 8", "image": "assets/game8.png", "description": "Simulation game on Facebook.", "download": "https://www.facebook.com/yourpage/posts/game8" },
-  { "title": "Game 9", "image": "assets/game9.png", "description": "Puzzle strategy game.", "download": "download/game9.exe" },
-  { "title": "Game 10", "image": "assets/game10.png", "description": "Fun multiplayer game.", "download": "https://t.me/yourchannel/2010" },
-  { "title": "Game 11", "image": "assets/game11.png", "description": "Adventure puzzle game.", "download": "https://www.youtube.com/watch?v=game11" },
+  {
+    "title": "Game 1",
+    "image": "assets/game1.png",
+    "description": "Fun game shared via Telegram.",
+    "download": "https://t.me/yourchannel/game1"
+  },
+  {
+    "title": "Game 2",
+    "image": "assets/game2.png",
+    "description": "Adventure game for all ages.",
+    "download": "download/game2.exe"
+  },
+  {
+    "title": "Game 3",
+    "image": "assets/game3.png",
+    "description": "Strategy game on Telegram.",
+    "download": "https://t.me/yourchannel/game3"
+  },
+  {
+    "title": "Game 4",
+    "image": "assets/game4.png",
+    "description": "Puzzle game to challenge your mind.",
+    "download": "download/game4.exe"
+  },
+  {
+    "title": "Game 5",
+    "image": "assets/game5.png",
+    "description": "Racing game tutorial on YouTube.",
+    "download": "https://www.youtube.com/watch?v=game5"
+  },
+  {
+    "title": "Game 6",
+    "image": "assets/game6.png",
+    "description": "Shooter game shared on Facebook.",
+    "download": "https://www.facebook.com/yourpage/posts/game6"
+  },
+  {
+    "title": "Game 7",
+    "image": "assets/game7.png",
+    "description": "Arcade game for fun.",
+    "download": "download/game7.exe"
+  },
+  {
+    "title": "Game 8",
+    "image": "assets/game8.png",
+    "description": "Multiplayer online game.",
+    "download": "https://t.me/yourchannel/game8"
+  },
+  {
+    "title": "Game 9",
+    "image": "assets/game9.png",
+    "description": "Simulation game tutorial.",
+    "download": "https://www.youtube.com/watch?v=game9"
+  },
+  {
+    "title": "Game 10",
+    "image": "assets/game10.png",
+    "description": "Board game app on Facebook.",
+    "download": "https://www.facebook.com/yourpage/posts/game10"
+  },
+  {
+    "title": "Game 11",
+    "image": "assets/game11.png",
+    "description": "Strategy puzzle game shared via Telegram.",
+    "download": "https://t.me/yourchannel/game11"
+  },
 
-  { "title": "Tutorial 1", "image": "assets/tutorial1.png", "description": "Watch this tutorial on YouTube.", "download": "https://www.youtube.com/watch?v=tutorial1" },
-  { "title": "Tutorial 2", "image": "assets/tutorial2.png", "description": "Download guide from Facebook post.", "download": "https://www.facebook.com/yourpage/posts/tutorial2" },
-  { "title": "Tutorial 3", "image": "assets/tutorial3.png", "description": "Telegram tutorial for beginners.", "download": "https://t.me/yourchannel/3003" },
-  { "title": "Tutorial 4", "image": "assets/tutorial4.png", "description": "YouTube tutorial for software tips.", "download": "https://www.youtube.com/watch?v=tutorial4" },
-  { "title": "Tutorial 5", "image": "assets/tutorial5.png", "description": "Facebook guide for games.", "download": "https://www.facebook.com/yourpage/posts/tutorial5" },
-  { "title": "Tutorial 6", "image": "assets/tutorial6.png", "description": "Telegram tutorial for productivity.", "download": "https://t.me/yourchannel/3006" },
-  { "title": "Tutorial 7", "image": "assets/tutorial7.png", "description": "YouTube tutorial for graphics.", "download": "https://www.youtube.com/watch?v=tutorial7" },
-  { "title": "Tutorial 8", "image": "assets/tutorial8.png", "description": "Facebook tutorial for beginners.", "download": "https://www.facebook.com/yourpage/posts/tutorial8" },
-  { "title": "Tutorial 9", "image": "assets/tutorial9.png", "description": "Telegram tutorial for advanced users.", "download": "https://t.me/yourchannel/3009" },
-  { "title": "Tutorial 10", "image": "assets/tutorial10.png", "description": "YouTube tutorial for developers.", "download": "https://www.youtube.com/watch?v=tutorial10" },
-  { "title": "Tutorial 11", "image": "assets/tutorial11.png", "description": "Facebook tutorial for experts.", "download": "https://www.facebook.com/yourpage/posts/tutorial11" }
+  {
+    "title": "Tutorial 1",
+    "image": "assets/tutorial1.png",
+    "description": "YouTube tutorial for beginners.",
+    "download": "https://www.youtube.com/watch?v=tutorial1"
+  },
+  {
+    "title": "Tutorial 2",
+    "image": "assets/tutorial2.png",
+    "description": "Advanced tutorial on Telegram.",
+    "download": "https://t.me/yourchannel/tutorial2"
+  },
+  {
+    "title": "Tutorial 3",
+    "image": "assets/tutorial3.png",
+    "description": "Facebook guide for learning.",
+    "download": "https://www.facebook.com/yourpage/posts/tutorial3"
+  },
+  {
+    "title": "Tutorial 4",
+    "image": "assets/tutorial4.png",
+    "description": "YouTube tutorial for software tips.",
+    "download": "https://www.youtube.com/watch?v=tutorial4"
+  },
+  {
+    "title": "Tutorial 5",
+    "image": "assets/tutorial5.png",
+    "description": "Telegram tutorial for productivity.",
+    "download": "https://t.me/yourchannel/tutorial5"
+  },
+  {
+    "title": "Tutorial 6",
+    "image": "assets/tutorial6.png",
+    "description": "Facebook guide for games.",
+    "download": "https://www.facebook.com/yourpage/posts/tutorial6"
+  },
+  {
+    "title": "Tutorial 7",
+    "image": "assets/tutorial7.png",
+    "description": "YouTube tutorial for graphics.",
+    "download": "https://www.youtube.com/watch?v=tutorial7"
+  },
+  {
+    "title": "Tutorial 8",
+    "image": "assets/tutorial8.png",
+    "description": "Telegram tutorial for beginners.",
+    "download": "https://t.me/yourchannel/tutorial8"
+  },
+  {
+    "title": "Tutorial 9",
+    "image": "assets/tutorial9.png",
+    "description": "Facebook guide for advanced users.",
+    "download": "https://www.facebook.com/yourpage/posts/tutorial9"
+  },
+  {
+    "title": "Tutorial 10",
+    "image": "assets/tutorial10.png",
+    "description": "YouTube tutorial for developers.",
+    "download": "https://www.youtube.com/watch?v=tutorial10"
+  },
+  {
+    "title": "Tutorial 11",
+    "image": "assets/tutorial11.png",
+    "description": "Telegram tutorial for experts.",
+    "download": "https://t.me/yourchannel/tutorial11"
+  }
 ]
