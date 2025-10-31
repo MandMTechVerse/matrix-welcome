@@ -1,54 +1,36 @@
-// Get canvas
-const canvas = document.getElementById('matrix');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("matrix");
+const ctx = canvas.getContext("2d");
 
-// Make canvas full screen
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-// Ensure it stays behind all content
-canvas.style.position = 'fixed';
-canvas.style.top = '0';
-canvas.style.left = '0';
-canvas.style.zIndex = '-1'; // always behind
-canvas.style.pointerEvents = 'none'; // allows clicks through canvas
-
-// Custom characters
-const letters = "アァイィウヴエェオカガキギクグケゲコゴサザシジスズセゼソゾタダチッヂツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモヤャユュヨョラリルレロワヲンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-const lettersArray = letters.split('');
-
-const fontSize = 16;
-const columns = canvas.width / fontSize;
-
-// Store y positions for each column
-const drops = [];
-for (let x = 0; x < columns; x++) {
-  drops[x] = Math.random() * canvas.height;
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 }
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
 
-// Draw function
+const letters = "アァイィウヴエェオカガキギクグケゲコゴサザシジスズセゼソゾタダチッヂツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモヤャユュヨョラリルレロワヲンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+const lettersArr = letters.split("");
+const fontSize = 14;
+const columns = Math.floor(canvas.width / fontSize);
+const drops = Array(columns).fill(1);
+
+let hue = 0;
+
 function draw() {
-  // Semi-transparent background for fading effect
-  ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "rgba(0,0,0,0.05)";
+  ctx.fillRect(0,0,canvas.width,canvas.height);
+  ctx.font = fontSize + "px monospace";
 
-  ctx.fillStyle = '#00FF00';
-  ctx.font = fontSize + 'px monospace';
+  hue = (hue + 1) % 360;
 
   for (let i = 0; i < drops.length; i++) {
-    const text = lettersArray[Math.floor(Math.random() * lettersArray.length)];
-    ctx.fillText(text, i * fontSize, drops[i]);
+    const text = lettersArr[Math.floor(Math.random() * lettersArr.length)];
+    ctx.fillStyle = `hsl(${(hue + i*10) % 360}, 100%, 50%)`;
+    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
-    drops[i] += fontSize;
-    if (drops[i] > canvas.height) drops[i] = 0;
+    if (drops[i]*fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+    drops[i]++;
   }
 }
 
-// Animate
-setInterval(draw, 50);
-
-// Handle window resize
-window.addEventListener('resize', () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-});
+setInterval(draw, 33);
