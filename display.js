@@ -11,7 +11,7 @@ const pageInfo = document.getElementById('pageInfo');
 let items = [];
 let filteredItems = [];
 let currentPage = 1;
-const itemsPerPage = 15; // 3 rows × 5 columns
+const itemsPerPage = 10; // 2 rows × 5 columns
 
 // --- Load data from data.json ---
 fetch('data.json')
