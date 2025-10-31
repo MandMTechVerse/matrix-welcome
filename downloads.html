@@ -32,9 +32,24 @@
       left: 0;
       z-index: 0;
     }
-    header, main, footer {
+    header, main, footer, .social-icons {
       position: relative;
       z-index: 1; /* content above matrix */
+    }
+
+    /* Social Icons */
+    .social-icons {
+      text-align: center;
+      margin: 1rem 0;
+    }
+    .social-icons a img {
+      width: 40px;
+      height: 40px;
+      margin: 0 10px;
+      transition: transform 0.3s;
+    }
+    .social-icons a img:hover {
+      transform: scale(1.1);
     }
   </style>
 </head>
@@ -69,6 +84,13 @@
       <a href="display.html?type=tutorials" class="download-btn">Go</a>
     </div>
   </main>
+
+  <!-- Social Media Icons -->
+  <div class="social-icons">
+    <a href="https://facebook.com" target="_blank"><img src="assets/facebook.png" alt="Facebook"></a>
+    <a href="https://t.me" target="_blank"><img src="assets/telegram.png" alt="Telegram"></a>
+    <a href="https://youtube.com" target="_blank"><img src="assets/youtube.png" alt="YouTube"></a>
+  </div>
 
   <footer>
     <p>© 2025 M&M TechVerse | All rights reserved</p>
