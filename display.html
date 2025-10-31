@@ -32,19 +32,55 @@
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: 0; /* ensures it's behind everything */
-      pointer-events: none; /* allow clicks through canvas */
+      z-index: 0;
+      pointer-events: none;
     }
 
     /* Wrap all page content */
     .page-content {
       position: relative;
-      z-index: 1; /* higher than canvas */
+      z-index: 1;
     }
 
     header, main, footer {
       position: relative;
       z-index: 1;
+    }
+
+    /* Pagination button style */
+    .pagination button {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+      padding: 8px 16px;
+      margin: 5px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .pagination button:hover {
+      background-color: white;
+      color: black;
+    }
+
+    /* New button styled like pagination buttons */
+    #newButton {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+      padding: 8px 16px;
+      margin: 10px 0;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #newButton:hover {
+      background-color: white;
+      color: black;
     }
   </style>
 </head>
@@ -56,6 +92,10 @@
   <div class="page-content">
     <header>
       <h1>M&M TechVerse</h1>
+      
+      <!-- New button -->
+      <button id="newButton">Click Me</button>
+      
       <input type="text" id="searchBox" placeholder="Search..." />
     </header>
 
