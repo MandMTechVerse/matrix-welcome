@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M&M TechVerse</title>
+
+  <!-- Orbitron font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/icon.ico" type="image/x-icon">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="display.css">
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: black;
+      font-family: 'Orbitron', sans-serif;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    canvas#matrix {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    header, main, footer {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Matrix Background -->
+  <canvas id="matrix"></canvas>
+
+  <header>
+    <h1>M&M TechVerse</h1>
+    <input type="text" id="searchBox" placeholder="Search..." />
+  </header>
+
+  <main>
+    <div id="itemGrid" class="grid"></div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+      <button id="prevBtn">Previous</button>
+      <span id="pageInfo"></span>
+      <button id="nextBtn">Next</button>
+    </div>
+  </main>
+
+  <!-- Social Media -->
+  <div class="social-icons">
+    <a href="https://facebook.com" target="_blank"><img src="assets/facebook.png" alt="Facebook"></a>
+    <a href="https://t.me" target="_blank"><img src="assets/telegram.png" alt="Telegram"></a>
+    <a href="https://youtube.com" target="_blank"><img src="assets/youtube.png" alt="YouTube"></a>
+  </div>
+
+  <footer>
+    <p>© 2025 M&M TechVerse | All rights reserved</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="display.js"></script>
+  <script src="matrix.js"></script>
+</body>
+</html>
