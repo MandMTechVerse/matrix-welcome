@@ -54,6 +54,25 @@ function renderItems() {
     itemGrid.appendChild(card);
   });
 
+  // Category buttons
+const categoryButtons = document.querySelectorAll(".category-btn");
+
+categoryButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    // Remove 'active' from all buttons
+    categoryButtons.forEach(b => b.classList.remove("active"));
+    // Add 'active' to clicked button
+    btn.classList.add("active");
+
+    // Switch category
+    const category = btn.getAttribute("data-category");
+    switchCategory(category);
+  });
+});
+
+// Set default active button
+document.querySelector(`.category-btn[data-category="${currentCategory}"]`).classList.add("active");
+
   // Update pagination info
   const totalPages = Math.ceil(items.length / itemsPerPage);
   pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
