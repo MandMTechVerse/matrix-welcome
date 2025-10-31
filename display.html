@@ -45,42 +45,43 @@
     header, main, footer {
       position: relative;
       z-index: 1;
-    }
-
-    /* Pagination button style */
-    .pagination button {
-      background-color: transparent;
-      color: white;
-      border: 2px solid white;
-      padding: 8px 16px;
-      margin: 5px;
-      font-family: 'Orbitron', sans-serif;
-      font-size: 16px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .pagination button:hover {
-      background-color: white;
-      color: black;
+      text-align: center; /* Center header content */
     }
 
     /* New button styled like pagination buttons */
     #newButton {
-      background-color: transparent;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.3);
       color: white;
-      border: 2px solid white;
-      padding: 8px 16px;
-      margin: 10px 0;
+      padding: 10px 20px;
+      border-radius: 8px; /* matches pagination buttons */
+      cursor: pointer;
+      margin: 15px 0; /* space between title and search box */
       font-family: 'Orbitron', sans-serif;
       font-size: 16px;
-      cursor: pointer;
       transition: all 0.3s ease;
     }
 
     #newButton:hover {
-      background-color: white;
-      color: black;
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* Search box style (keep rounded) */
+    #searchBox {
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.3);
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      width: 80%;
+      max-width: 400px;
+      font-size: 1rem;
+      outline: none;
+      margin-top: 10px;
+    }
+
+    #searchBox::placeholder {
+      color: rgba(255,255,255,0.5);
     }
   </style>
 </head>
@@ -93,7 +94,7 @@
     <header>
       <h1>M&M TechVerse</h1>
       
-      <!-- New button -->
+      <!-- New button between title and search box -->
       <button id="newButton">Click Me</button>
       
       <input type="text" id="searchBox" placeholder="Search..." />
