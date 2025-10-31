@@ -25,11 +25,21 @@
       overflow-x: hidden;
     }
 
+    /* Matrix canvas behind all content */
     canvas#matrix {
       position: fixed;
       top: 0;
       left: 0;
-      z-index: -1;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* ensures it's behind everything */
+      pointer-events: none; /* allow clicks through canvas */
+    }
+
+    /* Wrap all page content */
+    .page-content {
+      position: relative;
+      z-index: 10; /* higher than canvas */
     }
 
     header, main, footer {
@@ -42,32 +52,35 @@
   <!-- Matrix Background -->
   <canvas id="matrix"></canvas>
 
-  <header>
-    <h1>M&M TechVerse</h1>
-    <input type="text" id="searchBox" placeholder="Search..." />
-  </header>
+  <!-- Page content wrapper -->
+  <div class="page-content">
+    <header>
+      <h1>M&M TechVerse</h1>
+      <input type="text" id="searchBox" placeholder="Search..." />
+    </header>
 
-  <main>
-    <div id="itemGrid" class="grid"></div>
+    <main>
+      <div id="itemGrid" class="grid"></div>
 
-    <!-- Pagination -->
-    <div class="pagination">
-      <button id="prevBtn">Previous</button>
-      <span id="pageInfo"></span>
-      <button id="nextBtn">Next</button>
+      <!-- Pagination -->
+      <div class="pagination">
+        <button id="prevBtn">Previous</button>
+        <span id="pageInfo"></span>
+        <button id="nextBtn">Next</button>
+      </div>
+    </main>
+
+    <!-- Social Media -->
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank"><img src="assets/facebook.png" alt="Facebook"></a>
+      <a href="https://t.me" target="_blank"><img src="assets/telegram.png" alt="Telegram"></a>
+      <a href="https://youtube.com" target="_blank"><img src="assets/youtube.png" alt="YouTube"></a>
     </div>
-  </main>
 
-  <!-- Social Media -->
-  <div class="social-icons">
-    <a href="https://facebook.com" target="_blank"><img src="assets/facebook.png" alt="Facebook"></a>
-    <a href="https://t.me" target="_blank"><img src="assets/telegram.png" alt="Telegram"></a>
-    <a href="https://youtube.com" target="_blank"><img src="assets/youtube.png" alt="YouTube"></a>
+    <footer>
+      <p>© 2025 M&M TechVerse | All rights reserved</p>
+    </footer>
   </div>
-
-  <footer>
-    <p>© 2025 M&M TechVerse | All rights reserved</p>
-  </footer>
 
   <!-- JS -->
   <script src="display.js"></script>
