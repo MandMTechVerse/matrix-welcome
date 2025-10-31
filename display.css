@@ -123,8 +123,7 @@ h1 {
 .social-icons img {
   width: 40px;
   height: 40px;
-  margin: 0 10px;
-  filter: brightness(0) invert(1);
+  margin: 0 10px;  
   transition: transform 0.3s;
 }
 
