@@ -1,37 +1,32 @@
-[
-  { "title": "Software 1", "image": "assets/software1.png", "description": "Shared via Telegram. Click to download.", "download": "https://t.me/yourchannel/1001", "category": "software" },
-  { "title": "Software 2", "image": "assets/software2.png", "description": "Professional software. Local download.", "download": "download/software2.exe", "category": "software" },
-  { "title": "Software 3", "image": "assets/software3.png", "description": "Advanced tool for productivity.", "download": "https://t.me/yourchannel/1003", "category": "software" },
-  { "title": "Software 4", "image": "assets/software4.png", "description": "Graphics design software.", "download": "download/software4.exe", "category": "software" },
-  { "title": "Software 5", "image": "assets/software5.png", "description": "Security software for PC.", "download": "https://t.me/yourchannel/1005", "category": "software" },
-  { "title": "Software 6", "image": "assets/software6.png", "description": "Software for developers.", "download": "download/software6.exe", "category": "software" },
-  { "title": "Software 7", "image": "assets/software7.png", "description": "Video editing software.", "download": "https://t.me/yourchannel/1007", "category": "software" },
-  { "title": "Software 8", "image": "assets/software8.png", "description": "Music production software.", "download": "download/software8.exe", "category": "software" },
-  { "title": "Software 9", "image": "assets/software9.png", "description": "Cloud storage software.", "download": "https://t.me/yourchannel/1009", "category": "software" },
-  { "title": "Software 10", "image": "assets/software10.png", "description": "3D modeling software.", "download": "download/software10.exe", "category": "software" },
-  { "title": "Software 11", "image": "assets/software11.png", "description": "Productivity suite.", "download": "https://t.me/yourchannel/1011", "category": "software" },
-
-  { "title": "Game 1", "image": "assets/game1.png", "description": "Fun game. Direct download link.", "download": "download/game1.exe", "category": "games" },
-  { "title": "Game 2", "image": "assets/game2.png", "description": "Strategy game shared via Telegram.", "download": "https://t.me/yourchannel/2002", "category": "games" },
-  { "title": "Game 3", "image": "assets/game3.png", "description": "Puzzle game tutorial on YouTube.", "download": "https://www.youtube.com/watch?v=game3", "category": "games" },
-  { "title": "Game 4", "image": "assets/game4.png", "description": "Adventure game on Facebook.", "download": "https://www.facebook.com/yourpage/posts/game4", "category": "games" },
-  { "title": "Game 5", "image": "assets/game5.png", "description": "Multiplayer racing game.", "download": "download/game5.exe", "category": "games" },
-  { "title": "Game 6", "image": "assets/game6.png", "description": "Shooter game shared via Telegram.", "download": "https://t.me/yourchannel/2006", "category": "games" },
-  { "title": "Game 7", "image": "assets/game7.png", "description": "Arcade game tutorial on YouTube.", "download": "https://www.youtube.com/watch?v=game7", "category": "games" },
-  { "title": "Game 8", "image": "assets/game8.png", "description": "Simulation game on Facebook.", "download": "https://www.facebook.com/yourpage/posts/game8", "category": "games" },
-  { "title": "Game 9", "image": "assets/game9.png", "description": "Puzzle strategy game.", "download": "download/game9.exe", "category": "games" },
-  { "title": "Game 10", "image": "assets/game10.png", "description": "Fun multiplayer game.", "download": "https://t.me/yourchannel/2010", "category": "games" },
-  { "title": "Game 11", "image": "assets/game11.png", "description": "Adventure puzzle game.", "download": "https://www.youtube.com/watch?v=game11", "category": "games" },
-
-  { "title": "Tutorial 1", "image": "assets/tutorial1.png", "description": "Watch this tutorial on YouTube.", "download": "https://www.youtube.com/watch?v=tutorial1", "category": "tutorials" },
-  { "title": "Tutorial 2", "image": "assets/tutorial2.png", "description": "Download guide from Facebook post.", "download": "https://www.facebook.com/yourpage/posts/tutorial2", "category": "tutorials" },
-  { "title": "Tutorial 3", "image": "assets/tutorial3.png", "description": "Telegram tutorial for beginners.", "download": "https://t.me/yourchannel/3003", "category": "tutorials" },
-  { "title": "Tutorial 4", "image": "assets/tutorial4.png", "description": "YouTube tutorial for software tips.", "download": "https://www.youtube.com/watch?v=tutorial4", "category": "tutorials" },
-  { "title": "Tutorial 5", "image": "assets/tutorial5.png", "description": "Facebook guide for games.", "download": "https://www.facebook.com/yourpage/posts/tutorial5", "category": "tutorials" },
-  { "title": "Tutorial 6", "image": "assets/tutorial6.png", "description": "Telegram tutorial for productivity.", "download": "https://t.me/yourchannel/3006", "category": "tutorials" },
-  { "title": "Tutorial 7", "image": "assets/tutorial7.png", "description": "YouTube tutorial for graphics.", "download": "https://www.youtube.com/watch?v=tutorial7", "category": "tutorials" },
-  { "title": "Tutorial 8", "image": "assets/tutorial8.png", "description": "Facebook tutorial for beginners.", "download": "https://www.facebook.com/yourpage/posts/tutorial8", "category": "tutorials" },
-  { "title": "Tutorial 9", "image": "assets/tutorial9.png", "description": "Telegram tutorial for advanced users.", "download": "https://t.me/yourchannel/3009", "category": "tutorials" },
-  { "title": "Tutorial 10", "image": "assets/tutorial10.png", "description": "YouTube tutorial for developers.", "download": "https://www.youtube.com/watch?v=tutorial10", "category": "tutorials" },
-  { "title": "Tutorial 11", "image": "assets/tutorial11.png", "description": "Facebook tutorial for experts.", "download": "https://www.facebook.com/yourpage/posts/tutorial11", "category": "tutorials" }
-]
+{
+  "software": [
+    {
+      "name": "WinRAR",
+      "description": "File compression and extraction tool.",
+      "image": "assets/software/winrar.png",
+      "link": "https://rarlab.com/download.htm"
+    },
+    {
+      "name": "VLC Media Player",
+      "description": "Powerful video and audio player.",
+      "image": "assets/software/vlc.png",
+      "link": "https://videolan.org/vlc"
+    }
+  ],
+  "games": [
+    {
+      "name": "Minecraft",
+      "description": "Creative sandbox adventure game.",
+      "image": "assets/games/minecraft.jpg",
+      "link": "https://minecraft.net"
+    }
+  ],
+  "tutorials": [
+    {
+      "name": "Install Windows 11",
+      "description": "Step-by-step guide to install Windows 11.",
+      "image": "assets/tutorials/windows11.jpg",
+      "link": "https://example.com/tutorial/windows11"
+    }
+  ]
+}
