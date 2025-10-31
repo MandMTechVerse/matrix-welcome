@@ -10,11 +10,38 @@
 
   <!-- Favicon -->
   <link rel="icon" href="assets/icon.ico" type="image/x-icon">
-  
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="downloads.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Ensure canvas is full screen behind content */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Orbitron', sans-serif;
+      overflow-x: hidden;
+      background: black;
+      position: relative;
+    }
+    canvas#matrix {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+    header, main, footer {
+      position: relative;
+      z-index: 1; /* content above matrix */
+    }
+  </style>
 </head>
 <body>
+  <!-- Matrix Canvas -->
+  <canvas id="matrix"></canvas>
+
   <header>
     <h1>M&M TechVerse</h1>
     <a href="index.html" class="back-button">Welcome</a>
@@ -25,30 +52,21 @@
       <img src="assets/softwares.gif" alt="Softwares">
       <h2>Softwares</h2>
       <p>Easy-to-install, ready to use apps</p>
-
-      <!-- Softwares card -->
       <a href="display.html?id=software1" class="download-btn">Go</a>
-      
     </div>
 
     <div class="card">
       <img src="assets/games.gif" alt="Games">
       <h2>Games</h2>
       <p>Fun games for all ages</p>
-
-      <!-- Games card -->
       <a href="display.html?id=game1" class="download-btn">Go</a>
-      
     </div>
 
     <div class="card">
       <img src="assets/tutorials.gif" alt="Tutorials">
       <h2>Tutorials</h2>
       <p>Step-by-step guide to master Windows</p>
-
-      <!-- Tutorials card -->
       <a href="display.html?id=tutorial1" class="download-btn">Go</a>
-      
     </div>
   </main>
 
@@ -58,6 +76,5 @@
 
   <!-- Matrix Effect Script -->
   <script src="matrix.js"></script>
-  
 </body>
 </html>
