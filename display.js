@@ -107,3 +107,18 @@ function switchCategory(category) {
     renderItems();
   }
 }
+
+// Category buttons
+const categoryButtons = document.querySelectorAll(".category-btn");
+
+categoryButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    categoryButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    const category = btn.getAttribute("data-category");
+    switchCategory(category);
+  });
+});
+
+// Set default active button
+document.querySelector(`.category-btn[data-category="${currentCategory}"]`).classList.add("active");
