@@ -1,32 +1,41 @@
 {
   "software": [
-    {
-      "name": "WinRAR",
-      "description": "File compression and extraction tool.",
-      "image": "assets/software/winrar.png",
-      "link": "https://rarlab.com/download.htm"
-    },
-    {
-      "name": "VLC Media Player",
-      "description": "Powerful video and audio player.",
-      "image": "assets/software/vlc.png",
-      "link": "https://videolan.org/vlc"
-    }
+    { "name": "WinRAR", "description": "File compression and extraction tool.", "image": "assets/software/winrar.png", "link": "https://rarlab.com/download.htm" },
+    { "name": "VLC Media Player", "description": "Powerful video and audio player.", "image": "assets/software/vlc.png", "link": "https://videolan.org/vlc" },
+    { "name": "7-Zip", "description": "Open-source compression software.", "image": "assets/software/7zip.png", "link": "https://www.7-zip.org/" },
+    { "name": "Notepad++", "description": "Text and source code editor.", "image": "assets/software/notepadpp.png", "link": "https://notepad-plus-plus.org/" },
+    { "name": "GIMP", "description": "Free graphics editing software.", "image": "assets/software/gimp.png", "link": "https://www.gimp.org/" },
+    { "name": "OBS Studio", "description": "Video recording and live streaming.", "image": "assets/software/obs.png", "link": "https://obsproject.com/" },
+    { "name": "Audacity", "description": "Audio editing software.", "image": "assets/software/audacity.png", "link": "https://www.audacityteam.org/" },
+    { "name": "LibreOffice", "description": "Free office suite.", "image": "assets/software/libreoffice.png", "link": "https://www.libreoffice.org/" },
+    { "name": "FileZilla", "description": "FTP client for file transfers.", "image": "assets/software/filezilla.png", "link": "https://filezilla-project.org/" },
+    { "name": "Paint.NET", "description": "Simple graphics editing tool.", "image": "assets/software/paintnet.png", "link": "https://www.getpaint.net/" },
+    { "name": "Thunderbird", "description": "Email client from Mozilla.", "image": "assets/software/thunderbird.png", "link": "https://www.thunderbird.net/" }
   ],
   "games": [
-    {
-      "name": "Minecraft",
-      "description": "Creative sandbox adventure game.",
-      "image": "assets/games/minecraft.jpg",
-      "link": "https://minecraft.net"
-    }
+    { "name": "Minecraft", "description": "Creative sandbox adventure game.", "image": "assets/games/minecraft.jpg", "link": "https://minecraft.net" },
+    { "name": "Among Us", "description": "Multiplayer social deduction game.", "image": "assets/games/amongus.jpg", "link": "https://www.innersloth.com/gameAmongUs.php" },
+    { "name": "Roblox", "description": "Online game creation platform.", "image": "assets/games/roblox.jpg", "link": "https://www.roblox.com/" },
+    { "name": "Fortnite", "description": "Battle royale game.", "image": "assets/games/fortnite.jpg", "link": "https://www.epicgames.com/fortnite/" },
+    { "name": "CS:GO", "description": "Competitive shooter game.", "image": "assets/games/csgo.jpg", "link": "https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/" },
+    { "name": "The Sims 4", "description": "Life simulation game.", "image": "assets/games/sims4.jpg", "link": "https://www.ea.com/games/the-sims/the-sims-4" },
+    { "name": "GTA V", "description": "Open world action game.", "image": "assets/games/gtav.jpg", "link": "https://www.rockstargames.com/V/" },
+    { "name": "League of Legends", "description": "MOBA game.", "image": "assets/games/lol.jpg", "link": "https://www.leagueoflegends.com/" },
+    { "name": "Valorant", "description": "Tactical shooter game.", "image": "assets/games/valorant.jpg", "link": "https://playvalorant.com/" },
+    { "name": "Stardew Valley", "description": "Farming simulation game.", "image": "assets/games/stardew.jpg", "link": "https://www.stardewvalley.net/" },
+    { "name": "Terraria", "description": "2D sandbox adventure game.", "image": "assets/games/terraria.jpg", "link": "https://terraria.org/" }
   ],
   "tutorials": [
-    {
-      "name": "Install Windows 11",
-      "description": "Step-by-step guide to install Windows 11.",
-      "image": "assets/tutorials/windows11.jpg",
-      "link": "https://example.com/tutorial/windows11"
-    }
+    { "name": "Install Windows 11", "description": "Step-by-step guide to install Windows 11.", "image": "assets/tutorials/windows11.jpg", "link": "https://example.com/tutorial/windows11" },
+    { "name": "Photoshop Basics", "description": "Learn Photoshop from scratch.", "image": "assets/tutorials/photoshop.jpg", "link": "https://www.youtube.com/watch?v=photoshop" },
+    { "name": "Excel Formulas", "description": "Master Excel formulas.", "image": "assets/tutorials/excel.jpg", "link": "https://www.youtube.com/watch?v=excel" },
+    { "name": "Python Programming", "description": "Beginner Python course.", "image": "assets/tutorials/python.jpg", "link": "https://www.youtube.com/watch?v=python" },
+    { "name": "JavaScript Basics", "description": "Learn JS fundamentals.", "image": "assets/tutorials/javascript.jpg", "link": "https://www.youtube.com/watch?v=javascript" },
+    { "name": "HTML & CSS", "description": "Web development tutorial.", "image": "assets/tutorials/htmlcss.jpg", "link": "https://www.youtube.com/watch?v=htmlcss" },
+    { "name": "React JS", "description": "React beginner tutorial.", "image": "assets/tutorials/react.jpg", "link": "https://www.youtube.com/watch?v=react" },
+    { "name": "Node.js Tutorial", "description": "Backend development tutorial.", "image": "assets/tutorials/node.jpg", "link": "https://www.youtube.com/watch?v=node" },
+    { "name": "Photoshop Advanced", "description": "Advanced Photoshop techniques.", "image": "assets/tutorials/photoshop2.jpg", "link": "https://www.youtube.com/watch?v=photoshop2" },
+    { "name": "Linux Basics", "description": "Learn Linux command line.", "image": "assets/tutorials/linux.jpg", "link": "https://www.youtube.com/watch?v=linux" },
+    { "name": "Docker Tutorial", "description": "Docker container tutorial.", "image": "assets/tutorials/docker.jpg", "link": "https://www.youtube.com/watch?v=docker" }
   ]
 }
