@@ -231,14 +231,14 @@ footer {
   }
 
   .category-buttons {
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 2.5rem;
+    flex-direction: column; /* stack vertically */
+    gap: 25px;              /* bigger space between buttons */
+    margin-bottom: 3rem;    /* extra space below buttons */
   }
 
   .category-buttons .category-btn {
     width: 80%;
     max-width: 250px;
-    margin: 0 auto;
+    margin: 0 auto;         /* center buttons */
   }
 }
