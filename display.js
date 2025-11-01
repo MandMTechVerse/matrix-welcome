@@ -108,7 +108,8 @@ function renderItems() {
       <img src="${item.image}" alt="${item.name}">
       <h3>${item.name}</h3>
       <p>${item.description}</p>
-      <a href="${item.link}" target="_blank" class="download-btn">Download</a>
+      <a href="${item.link}" target="_blank" class="download-btn">
+      ${currentCategory === 'tutorials' ? 'Watch' : 'Download'}</a>
     `;
     itemGrid.appendChild(card);
   });
