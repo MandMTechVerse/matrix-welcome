@@ -21,7 +21,7 @@
 .loader-text {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
-  color: #00ff00;
+  color: #ffffff;
   text-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00;
   animation: glow 1.5s infinite alternate;
 }
