@@ -72,17 +72,25 @@ h1 {
 #searchBox {
   padding: 10px 15px;
   border-radius: 8px;
-  border: 1px solid rgba(255,255,255,0.3);
-  background: rgba(255,255,255,0.1);
+  border: 1px solid #00ff00;          /* match button border */
+  background: rgba(0,255,0,0.2);       /* match button background */
   color: #fff;
   width: 80%;
   max-width: 400px;
   font-size: 1rem;
   outline: none;
+  transition: 0.3s;                    /* smooth hover transition */
 }
 
 #searchBox::placeholder {
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.7);
+}
+
+/* Hover effect like buttons */
+#searchBox:hover,
+#searchBox:focus {
+  background: rgba(0,255,0,0.4);       /* same hover as buttons */
+  border-color: #00ff00;
 }
 
 /* Grid layout */
