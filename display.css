@@ -106,7 +106,6 @@ h1 {
 .card {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  height: 520px;
   border-radius: 12px;
   text-align: center;
   padding: 1rem;
@@ -119,10 +118,9 @@ h1 {
 }
 
 .card img {
-  display: block;
-  width: 100%;               /* fill card width */
-  aspect-ratio: 4 / 5;       /* maintain 2:2.5 ratio */
-  object-fit: contain;       /* fit entire image without cropping */
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
