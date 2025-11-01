@@ -1,5 +1,3 @@
-// display.js
-
 // ===== Matrix Rain Preloader =====
 const preloaderCanvas = document.getElementById("preloaderMatrix");
 if (preloaderCanvas) {
@@ -45,63 +43,63 @@ if (preloaderCanvas) {
   }
 }
 
-// Number of items per page (2 rows × 5 columns)
+// ===== Items, Pagination, and Category =====
 const itemsPerPage = 10;
-
-// Current page
 let currentPage = 1;
-
-// Store all items
 let allItems = [];
-
-// Default category
 let currentCategory = "software";
+let currentSearch = ""; // store search query
 
 // DOM elements
 const itemGrid = document.getElementById("itemGrid");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 const pageInfo = document.getElementById("pageInfo");
+const searchBox = document.getElementById("searchBox");
 
-// ✅ Read category (type) from URL parameter
+// Read category from URL
 const urlParams = new URLSearchParams(window.location.search);
 const typeFromURL = urlParams.get("type");
-if (typeFromURL) {
-  currentCategory = typeFromURL;
-}
+if (typeFromURL) currentCategory = typeFromURL;
 
 // Fetch JSON data
 fetch("data.json")
-  .then(response => response.json())
+  .then(res => res.json())
   .then(data => {
-    allItems = data; // store all categories
+    allItems = data;
     renderItems();
-
-    // Hide preloader after items are rendered
-    const preloader = document.getElementById("preloader");
-    preloader.classList.add("fade-out");
+    document.getElementById("preloader").classList.add("fade-out");
   })
   .catch(err => {
     console.error("Failed to load JSON:", err);
-    // Hide preloader even if JSON fails
-    const preloader = document.getElementById("preloader");
-    preloader.classList.add("fade-out");
+    document.getElementById("preloader").classList.add("fade-out");
   });
 
-// Render items for current page & category
+// ===== Render Items =====
 function renderItems() {
-  const items = allItems[currentCategory];
-  if (!items || items.length === 0) {
+  let items = allItems[currentCategory] || [];
+
+  // Filter by search query
+  if (currentSearch.trim() !== "") {
+    const query = currentSearch.toLowerCase();
+    items = items.filter(item => item.name.toLowerCase().includes(query));
+  }
+
+  if (items.length === 0) {
     itemGrid.innerHTML = "<p>No items found.</p>";
     pageInfo.textContent = "";
+    prevBtn.disabled = true;
+    nextBtn.disabled = true;
     return;
   }
+
+  const totalPages = Math.ceil(items.length / itemsPerPage);
+  if (currentPage > totalPages) currentPage = 1;
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const itemsToShow = items.slice(startIndex, endIndex);
 
-  // Generate cards
   itemGrid.innerHTML = "";
   itemsToShow.forEach(item => {
     const card = document.createElement("div");
@@ -115,14 +113,12 @@ function renderItems() {
     itemGrid.appendChild(card);
   });
 
-  // Update pagination
-  const totalPages = Math.ceil(items.length / itemsPerPage);
   pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
   prevBtn.disabled = currentPage === 1;
   nextBtn.disabled = currentPage === totalPages;
 }
 
-// Pagination button events
+// ===== Pagination =====
 prevBtn.addEventListener("click", () => {
   if (currentPage > 1) {
     currentPage--;
@@ -131,42 +127,40 @@ prevBtn.addEventListener("click", () => {
 });
 
 nextBtn.addEventListener("click", () => {
-  const items = allItems[currentCategory];
-  const totalPages = Math.ceil(items.length / itemsPerPage);
+  const totalPages = Math.ceil((allItems[currentCategory] || []).length / itemsPerPage);
   if (currentPage < totalPages) {
     currentPage++;
     renderItems();
   }
 });
 
-// Switch category (when clicking category buttons)
+// ===== Category Buttons =====
 function switchCategory(category) {
-  if (allItems[category]) {
-    currentCategory = category;
-    currentPage = 1;
-    renderItems();
+  if (!allItems[category]) return;
+  currentCategory = category;
+  currentPage = 1;
+  currentSearch = ""; // clear search
+  searchBox.value = ""; // clear input
+  renderItems();
 
-    // Update active button
-    const categoryButtons = document.querySelectorAll(".category-btn");
-    categoryButtons.forEach(b => b.classList.remove("active"));
-    const activeBtn = document.querySelector(`.category-btn[data-category="${category}"]`);
-    if (activeBtn) activeBtn.classList.add("active");
-  }
+  document.querySelectorAll(".category-btn").forEach(btn => btn.classList.remove("active"));
+  const activeBtn = document.querySelector(`.category-btn[data-category="${category}"]`);
+  if (activeBtn) activeBtn.classList.add("active");
 }
 
-// Hide preloader after data loads
-window.addEventListener("load", () => {
-  const preloader = document.getElementById("preloader");
-  setTimeout(() => {
-    preloader.classList.add("fade-out");
-  }, 800); // wait a bit for smooth fade
+document.querySelectorAll(".category-btn").forEach(btn => {
+  btn.addEventListener("click", () => switchCategory(btn.getAttribute("data-category")));
 });
 
-// Category button click events
-const categoryButtons = document.querySelectorAll(".category-btn");
-categoryButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const category = btn.getAttribute("data-category");
-    switchCategory(category);
-  });
+// ===== Search =====
+searchBox.addEventListener("input", () => {
+  currentSearch = searchBox.value;
+  currentPage = 1;
+  renderItems();
+});
+
+// ===== Preloader fallback =====
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  setTimeout(() => preloader.classList.add("fade-out"), 800);
 });
