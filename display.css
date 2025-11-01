@@ -230,15 +230,16 @@ footer {
     height: auto;
   }
 
+  /* Fix mobile category buttons spacing */
   .category-buttons {
     flex-direction: column; /* stack vertically */
-    gap: 25px;              /* bigger space between buttons */
-    margin-bottom: 3rem;    /* extra space below buttons */
+    align-items: center;    /* center horizontally */
+    margin-bottom: 3rem;    /* space below buttons */
   }
 
   .category-buttons .category-btn {
     width: 80%;
     max-width: 250px;
-    margin: 0 auto;         /* center buttons */
+    margin: 10px 0;         /* vertical spacing between buttons */
   }
 }
