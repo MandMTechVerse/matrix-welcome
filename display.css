@@ -119,9 +119,10 @@ h1 {
 }
 
 .card img {
-  width: 100%;
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
+  display: block;
+  width: 100% !important;
+  height: 330px !important;
+  object-fit: cover !important;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
