@@ -74,10 +74,13 @@ header h1 {
 }
 
 .card img {
-  width: 60px;
-  height: 60px;
+  width: 128px;      /* bigger width */
+  height: 128px;     /* bigger height */
+  max-width: 100%;   /* ensure it doesn't exceed card width */
+  object-fit: contain; /* maintain aspect ratio */
   margin-bottom: 1rem;
 }
+
 
 .card h2 {
   font-size: 1.2rem;
