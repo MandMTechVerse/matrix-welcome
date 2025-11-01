@@ -104,6 +104,14 @@ function switchCategory(category) {
   }
 }
 
+// Hide preloader after data loads
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  setTimeout(() => {
+    preloader.classList.add("fade-out");
+  }, 800); // wait a bit for smooth fade
+});
+
 // Category button click events
 const categoryButtons = document.querySelectorAll(".category-btn");
 categoryButtons.forEach(btn => {
