@@ -32,11 +32,16 @@ fetch("data.json")
     allItems = data; // store all categories
     renderItems();
 
-    // Set active button after data is loaded
-    const activeBtn = document.querySelector(`.category-btn[data-category="${currentCategory}"]`);
-    if (activeBtn) activeBtn.classList.add("active");
+    // Hide preloader after items are rendered
+    const preloader = document.getElementById("preloader");
+    preloader.classList.add("fade-out");
   })
-  .catch(err => console.error("Failed to load JSON:", err));
+  .catch(err => {
+    console.error("Failed to load JSON:", err);
+    // Hide preloader even if JSON fails
+    const preloader = document.getElementById("preloader");
+    preloader.classList.add("fade-out");
+  });
 
 // Render items for current page & category
 function renderItems() {
