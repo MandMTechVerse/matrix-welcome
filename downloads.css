@@ -34,17 +34,17 @@ header h1 {
 .back-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: rgba(255, 255, 255, 0.1); /* semi-transparent white */
-  color: #fff;
+  background: rgba(0,255,0,0.2);   /* light green transparent background */
+  border: 1px solid #00ff00;       /* bright green border */
+  border-radius: 8px;
+  color: #fff;                      /* white text */
   text-decoration: none;
-  border-radius: 5px;
   font-weight: bold;
   transition: background 0.3s, transform 0.2s;
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .back-button:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0,255,0,0.4);   /* darker green on hover */
   transform: scale(1.05);
 }
 
