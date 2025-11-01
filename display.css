@@ -7,9 +7,10 @@
   height: 100%;
   background: #000;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center;      /* vertical centering */
+  justify-content: center;  /* horizontal centering */
   z-index: 9999;
+  overflow: hidden;         /* ensure canvas stays behind */
   transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 
@@ -18,14 +19,29 @@
   visibility: hidden;
 }
 
+/* Matrix canvas behind the text */
+#preloader canvas#preloaderMatrix {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* behind the text */
+}
+
+/* Loader text */
 .loader-text {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
   color: #ffffff;
   text-shadow: 0 0 15px #ffffff, 0 0 30px #ffffff;
   animation: glow 1.5s infinite alternate;
+  position: relative;
+  z-index: 1; /* above the canvas */
+  text-align: center;
 }
 
+/* Glow animation */
 @keyframes glow {
   from {
     opacity: 0.5;
