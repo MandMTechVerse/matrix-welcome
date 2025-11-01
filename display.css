@@ -120,9 +120,9 @@ h1 {
 
 .card img {
   display: block;
-  width: 100% !important;
-  height: 330px !important;
-  object-fit: cover !important;
+  width: 100%;               /* fill card width */
+  aspect-ratio: 4 / 5;       /* maintain 2:2.5 ratio */
+  object-fit: contain;       /* fit entire image without cropping */
   border-radius: 10px;
   margin-bottom: 1rem;
 }
