@@ -9,7 +9,7 @@ let currentPage = 1;
 // Store all items
 let allItems = [];
 
-// Selected category (default: software)
+// Default category
 let currentCategory = "software";
 
 // DOM elements
@@ -18,12 +18,23 @@ const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 const pageInfo = document.getElementById("pageInfo");
 
+// ✅ Read category (type) from URL parameter
+const urlParams = new URLSearchParams(window.location.search);
+const typeFromURL = urlParams.get("type");
+if (typeFromURL) {
+  currentCategory = typeFromURL;
+}
+
 // Fetch JSON data
 fetch("data.json")
   .then(response => response.json())
   .then(data => {
     allItems = data; // store all categories
     renderItems();
+
+    // Set active button after data is loaded
+    const activeBtn = document.querySelector(`.category-btn[data-category="${currentCategory}"]`);
+    if (activeBtn) activeBtn.classList.add("active");
   })
   .catch(err => console.error("Failed to load JSON:", err));
 
@@ -40,7 +51,7 @@ function renderItems() {
   const endIndex = startIndex + itemsPerPage;
   const itemsToShow = items.slice(startIndex, endIndex);
 
-  // Generate HTML
+  // Generate cards
   itemGrid.innerHTML = "";
   itemsToShow.forEach(item => {
     const card = document.createElement("div");
@@ -54,30 +65,9 @@ function renderItems() {
     itemGrid.appendChild(card);
   });
 
-  // Category buttons
-const categoryButtons = document.querySelectorAll(".category-btn");
-
-categoryButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    // Remove 'active' from all buttons
-    categoryButtons.forEach(b => b.classList.remove("active"));
-    // Add 'active' to clicked button
-    btn.classList.add("active");
-
-    // Switch category
-    const category = btn.getAttribute("data-category");
-    switchCategory(category);
-  });
-});
-
-// Set default active button
-document.querySelector(`.category-btn[data-category="${currentCategory}"]`).classList.add("active");
-
-  // Update pagination info
+  // Update pagination
   const totalPages = Math.ceil(items.length / itemsPerPage);
   pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
-
-  // Disable buttons if needed
   prevBtn.disabled = currentPage === 1;
   nextBtn.disabled = currentPage === totalPages;
 }
@@ -99,26 +89,26 @@ nextBtn.addEventListener("click", () => {
   }
 });
 
-// Optional: Function to switch category
+// Switch category (when clicking category buttons)
 function switchCategory(category) {
   if (allItems[category]) {
     currentCategory = category;
     currentPage = 1;
     renderItems();
+
+    // Update active button
+    const categoryButtons = document.querySelectorAll(".category-btn");
+    categoryButtons.forEach(b => b.classList.remove("active"));
+    const activeBtn = document.querySelector(`.category-btn[data-category="${category}"]`);
+    if (activeBtn) activeBtn.classList.add("active");
   }
 }
 
-// Category buttons
+// Category button click events
 const categoryButtons = document.querySelectorAll(".category-btn");
-
 categoryButtons.forEach(btn => {
   btn.addEventListener("click", () => {
-    categoryButtons.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
     const category = btn.getAttribute("data-category");
     switchCategory(category);
   });
 });
-
-// Set default active button
-document.querySelector(`.category-btn[data-category="${currentCategory}"]`).classList.add("active");
