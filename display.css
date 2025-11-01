@@ -72,19 +72,19 @@
   z-index: 1;
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
-  color: #00ff00;
-  text-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00;
+  color: #ffffff;
+  text-shadow: 0 0 15px #ffffff, 0 0 30px #ffffff;
   animation: glow 1.5s infinite alternate;
 }
 
 @keyframes glow {
   from {
     opacity: 0.5;
-    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
   }
   to {
     opacity: 1;
-    text-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 60px #00ff00;
+    text-shadow: 0 0 20px #ffffff, 0 0 40px #00ff00, 0 0 60px #ffffff;
   }
 }
 
