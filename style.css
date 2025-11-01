@@ -47,21 +47,21 @@ html, body {
   font-size: 48px;
 }
 
-/* Enter button */
+/* Enter button: green style matching download button */
 #enter-btn {
   display: inline-block;
   padding: 12px 30px;
   font-size: 22px;
   cursor: pointer;
-  border: 2px solid #fff;
+  border: 2px solid #00ff00;        /* bright green border */
   border-radius: 8px;
-  background: transparent;
-  color: #fff;
+  background: rgba(0,255,0,0.2);     /* light green transparent background */
+  color: #fff;                        /* white text */
   text-decoration: none;
-  transition: 0.3s ease;
+  transition: 0.3s ease, transform 0.2s;
 }
 
 #enter-btn:hover {
-  background: rgba(255,255,255,0.2);
+  background: rgba(0,255,0,0.4);     /* darker green on hover */
   transform: scale(1.05);
 }
