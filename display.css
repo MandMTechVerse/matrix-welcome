@@ -7,10 +7,10 @@
   height: 100%;
   background: #000;
   display: flex;
-  align-items: center;      
-  justify-content: center;  
+  align-items: center;      /* vertical centering */
+  justify-content: center;  /* horizontal centering */
   z-index: 9999;
-  overflow: hidden;         
+  overflow: hidden;         /* ensure canvas stays behind */
   transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 
@@ -26,7 +26,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  z-index: 0; /* behind the text */
 }
 
 /* Loader text */
@@ -37,10 +37,11 @@
   text-shadow: 0 0 15px #ffffff, 0 0 30px #ffffff;
   animation: glow 1.5s infinite alternate;
   position: relative;
-  z-index: 1;
+  z-index: 1; /* above the canvas */
   text-align: center;
 }
 
+/* Glow animation */
 @keyframes glow {
   from {
     opacity: 0.5;
@@ -71,23 +72,24 @@ h1 {
 #searchBox {
   padding: 10px 15px;
   border-radius: 8px;
-  border: 1px solid #00ff00;          
-  background: rgba(0,255,0,0.2);       
+  border: 1px solid #00ff00;          /* match button border */
+  background: rgba(0,255,0,0.2);       /* match button background */
   color: #fff;
   width: 80%;
   max-width: 400px;
   font-size: 1rem;
   outline: none;
-  transition: 0.3s;                    
+  transition: 0.3s;                    /* smooth hover transition */
 }
 
 #searchBox::placeholder {
   color: rgba(255,255,255,0.7);
 }
 
+/* Hover effect like buttons */
 #searchBox:hover,
 #searchBox:focus {
-  background: rgba(0,255,0,0.4);       
+  background: rgba(0,255,0,0.4);       /* same hover as buttons */
   border-color: #00ff00;
 }
 
@@ -101,7 +103,6 @@ h1 {
   margin: auto;
 }
 
-/* Card */
 .card {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -116,18 +117,14 @@ h1 {
   box-shadow: 0 0 15px rgba(0,255,0,0.4);
 }
 
-/* Fixed 1:1 Image */
 .card img {
   width: 100%;
-  height: 0;
-  padding-top: 100%;      /* 1:1 ratio */
-  object-fit: cover;      /* fill container & crop if necessary */
+  height: 330px;
+  object-fit: cover;
   border-radius: 10px;
-  margin-bottom: 0.5rem;  /* spacing */
-  display: block;
+  margin-bottom: 1rem;
 }
 
-/* Card Text */
 .card h3 {
   font-size: 1.1rem;
   color: #00ff00;
@@ -140,7 +137,7 @@ h1 {
   color: #fff;
 }
 
-/* Buttons */
+/* Unified Green Button Styles */
 button.btn,
 button#homebtn,
 .category-buttons .category-btn,
@@ -237,16 +234,20 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .card img {
+    height: auto;
+  }
+
   /* Fix mobile category buttons spacing */
   .category-buttons {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 3rem;
+    flex-direction: column; /* stack vertically */
+    align-items: center;    /* center horizontally */
+    margin-bottom: 3rem;    /* space below buttons */
   }
 
   .category-buttons .category-btn {
     width: 80%;
     max-width: 250px;
-    margin: 10px 0;
+    margin: 10px 0;         /* vertical spacing between buttons */
   }
 }
