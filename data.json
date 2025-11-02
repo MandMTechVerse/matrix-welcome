@@ -1,6 +1,6 @@
 {
   "software": [
-    { "name": "WinRAR", "description": "File compression and extraction tool.", "image": "assets/software/winrar.png", "link": "https://rarlab.com/download.htm" },
+    { "name": "WinRAR", "description": "File compression and extraction tool", "image": "assets/software/winrar.png", "link": "https://rarlab.com/download.htm" },
     { "name": "VLC Media Player", "description": "Powerful video and audio player.", "image": "assets/software/vlc.png", "link": "https://videolan.org/vlc" },
     { "name": "7-Zip", "description": "Open-source compression software.", "image": "assets/software/7zip.png", "link": "https://www.7-zip.org/" },
     { "name": "Notepad++", "description": "Text and source code editor.", "image": "assets/software/notepadpp.png", "link": "https://notepad-plus-plus.org/" },
