@@ -13,7 +13,7 @@
     { "name": "Thunderbird", "description": "Email client from Mozilla.", "image": "assets/software/thunderbird.png", "link": "https://www.thunderbird.net/" }
   ],
   "games": [
-    { "name": "Minecraft", "description": "Creative sandbox adventure game.", "image": "assets/games/minecraft.jpg", "link": "https://minecraft.net" },
+    { "name": "PC Building Simulator", "description": "Free PC Build mode with 1200+ realistic parts.", "image": "assets/games/pcbuildingsimulator.png", "link": "https://minecraft.net" },
     { "name": "Among Us", "description": "Multiplayer social deduction game.", "image": "assets/games/amongus.jpg", "link": "https://www.innersloth.com/gameAmongUs.php" },
     { "name": "Roblox", "description": "Online game creation platform.", "image": "assets/games/roblox.jpg", "link": "https://www.roblox.com/" },
     { "name": "Fortnite", "description": "Battle royale game.", "image": "assets/games/fortnite.jpg", "link": "https://www.epicgames.com/fortnite/" },
